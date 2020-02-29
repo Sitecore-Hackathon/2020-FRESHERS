@@ -1,0 +1,36 @@
+﻿@model Sitecore.Hackathon.Website.ViewModel.PastYearSnapshotViewModel
+
+@if (Model != null)
+{
+    <section>
+        <div class="container">
+            <div class="section-heading">
+                <h3>@Model.PreviousYearSnapshotTitle</h3>
+            </div>
+            <div class="row">
+                @foreach (var item in Model.PreviousYearSnapshotList)
+                {
+                    <div class="col-lg-4 col-md-12 sm-margin-30px-bottom">
+                        <div class="blog-grid">
+                            <div class="blog-grid-img position-relative">
+                                <img alt="img" src="@item.PreviousYearImage">
+                                <div class="data-box-grid position-absolute">
+                                    <h5>@item.PreviousYear</h5>
+                                </div>
+                            </div>
+                            <div class="blog-grid-text padding-25px-all sm-padding-20px-all border border-color-medium-gray">
+                                <h4><a href="javascript:void(0)">@item.PreviousYearTitle</a></h4>
+                                <p class="no-margin">
+                                    @item.PreviousYearDescription
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+
+
+}

@@ -1,0 +1,54 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model Sitecore.Hackathon.Website.ViewModel.BannerViewModel
+
+
+
+@if (Model != null)
+{
+    @*<p>@Html.Glass().Editable()</p>*@
+
+    <div class="banner-area">
+        <div class="container">
+            <div class="row">
+
+                <!-- start left banner text -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="header-text sm-width-75 xs-width-100">
+                        <h1 class="line-height-55 md-line-height-50 xs-line-height-40 wow fadeInUp text-theme-color xs-font-size30"
+                            data-wow-delay=".1s">
+                            @Html.Sitecore().Field("BannerTitle", Model.BannerTitle)
+                        </h1>
+                        <p class="font-size16 line-height-28 xs-font-size14 xs-line-height-26 margin-30px-bottom sm-margin-20px-bottom width-80 xs-width-90 wow fadeInUp"
+                           data-wow-delay=".2s">
+                            @Html.Sitecore().Field("BannerDescription", Model.BannerDescription)
+                        </p>
+                        <div class="wow fadeInUp story-video" data-wow-delay=".4s">
+                            <a href="javascript:void(0)" 
+                               class="butn margin-10px-right vertical-align-middle">Register</a>
+                            <a href="@Html.Sitecore().Field("YoutubeVedioUrl", Model.YoutubeVedioUrl)" class="btn-play video vertical-align-middle"><i class="fa fa-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end banner text -->
+                <!-- start right image banner -->
+                <div class="col-lg-6 col-md-12 sm-text-center">
+                    <div class="banner-img">
+                        @Html.Sitecore().Field("BannerImage",Model.BannerImage)
+                        @*<img src="@Model.BannerImage.MediaItem.Uri" class="img-fluid float-right width-100" alt="">*@
+                        @*<img src="~/assests/img/content/content-01.png" class="img-fluid float-right width-100" alt="">*@
+                    </div>
+                </div>
+                <!-- end right image banner -->
+            </div>
+        </div>
+
+        <!-- start shape area -->
+        <div class="header-shape-bg">
+            <img src="~/assests/img/banner/header-bg02.svg" class="img-fluid width-100" alt="">
+        </div>
+        <!-- end shape area -->
+    </div>
+
+
+
+}

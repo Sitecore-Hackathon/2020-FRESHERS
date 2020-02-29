@@ -1,0 +1,34 @@
+﻿@model Sitecore.Hackathon.Website.ViewModel.JudgesViewModel
+
+
+
+@if (Model != null)
+{
+    <section class="bg-theme-light">
+        <div class="container">
+            <div class="section-heading">
+                <h3>@Model.JudgesInformation</h3>
+            </div>
+            @if (Model.JudgesList.Count > 0)
+            {
+                <div class="owl-carousel owl-theme" id="testmonials-carousel">
+                    @foreach (var item in Model.JudgesList)
+                    {
+                        <div class="testmonial-single text-center">
+                            <span class="font-size24 vertical-align-top display-inline-block margin-20px-bottom"><i class="fas fa-quote-right"></i></span>
+                            <p class="line-height-28 width-50 sm-width-75 xs-width-90 center-col">
+                                @item.JudgesInfo
+                            </p>
+                            <img src="@item.JudgesPic" alt="" class="rounded-circle border">
+                            <h4 class="padding-20px-top font-size16 letter-spacing-1 no-margin-bottom">@item.JudgeName</h4>
+                            <h6 class="no-margin font-size11 text-uppercase letter-spacing-2">@item.JudgesProfession</h6>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </section>
+
+
+
+}

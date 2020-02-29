@@ -1,0 +1,27 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model Sitecore.Hackathon.Website.ViewModel.AboutHackathonViewModel
+
+
+
+@if (Model != null)
+{
+    <section class="bg-theme-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 sm-text-center sm-margin-20px-bottom">
+                    @Html.Sitecore().Field("AboutHackathonImage", Model.AboutHackathonImage)
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="padding-30px-left sm-no-padding padding-50px-tb md-padding-30px-tb">
+                        <div class="alt-font text-theme-color margin-5px-bottom letter-spacing-1">@Html.Sitecore().Field("AboutHackathonTitle", Model.AboutHackathonTitle)</div>
+                        <h4 class="sm-margin-lr-auto xs-width-100">@Html.Sitecore().Field("AboutHackathonCaption", Model.AboutHackathonCaption)</h4>
+                        <p class="margin-30px-bottom xs-margin-20px-bottom">
+                            @Html.Sitecore().Field("AboutHackathonDescription", Model.AboutHackathonDescription)
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+}

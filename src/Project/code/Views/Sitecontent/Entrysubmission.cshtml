@@ -1,0 +1,24 @@
+﻿@model Sitecore.Hackathon.Website.ViewModel.EntrySubmissionViewModel
+
+
+@if (Model != null)
+{
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 order-2 order-lg-1">
+                    <div class="padding-30px-right sm-no-padding padding-50px-tb md-padding-30px-tb">
+                        <div class="alt-font text-theme-color margin-5px-bottom letter-spacing-1">@Html.Sitecore().Field("EntrySubmissionTItle", Model.EntrySubmissionTitle)</div>
+                        <h4>@Html.Sitecore().Field("EntrySubmissionCaption", Model.EntrySubmissionCaption)</h4>
+                        @Html.Sitecore().Field("EntrySubmissionDescription", Model.EntrySubmissionDescription)
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-md-12 sm-text-center sm-margin-30px-bottom order-1 order-lg-2">
+                    @Html.Sitecore().Field("EntrySubmissionImage", Model.EntrySubmissionImage)
+                    @*<img src="~/assests/img/content/content-04.png" alt="" />*@
+                </div>
+            </div>
+        </div>
+    </section>
+}

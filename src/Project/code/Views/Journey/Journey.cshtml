@@ -1,0 +1,22 @@
+﻿@model Sitecore.Hackathon.Website.ViewModel.JourneyViewModel
+
+
+<div class="row">
+    @if (Model != null && Model.JourneyListDetails.Count > 0)
+    {
+        foreach (var itemiterator in Model.JourneyListDetails)
+        {
+            <div class="col-lg-4 col-md-12 sm-margin-20px-bottom">
+                <div class="service-block2 text-center">
+                    <div class="item-icon margin-20px-bottom">
+                        <span class="@itemiterator.JourneyStyle"></span>
+                    </div>
+                    <div class="item-text">
+                        <h3 class="margin-10px-bottom font-size22 md-font-size20 xs-font-size18">@itemiterator.JourneyHeader</h3>
+                        <p class="font-size16 line-height-28">@itemiterator.JourneyCaption</p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
