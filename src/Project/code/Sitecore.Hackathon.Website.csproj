@@ -48,7 +48,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="bootstrap">
-      <Version>3.3.7</Version>
+      <Version>3.4.1</Version>
     </PackageReference>
     <PackageReference Include="Glass.Mapper.Sc.93">
       <Version>5.6.160</Version>
